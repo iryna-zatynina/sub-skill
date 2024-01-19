@@ -58,11 +58,7 @@
 
     <nav class="social">
       <ul>
-        <li class="instagram">
-          <a href="">
-            <i></i>
-          </a>
-        </li>
+        <social-button [icon]="icon" *ngFor="let icon of icons"></social-button>
 
         <li class="telegram">
           <a href="">
@@ -112,17 +108,7 @@
   </div>
 </section>
 
-<form action="" class="subscribe">
-  <div class="column">
-    <h3>Subscribe to SubSkills</h3>
-    <p>Get secret discouts, new about skill updates and interesting articles</p>
-  </div>
-
-  <div class="column">
-    <input type="text" placeholder="Your-email@example.com">
-    <button>Subscribe</button>
-  </div>
-</form>
+<subscribe-form></subscribe-form>
 
 <section>
   <div class="column">
