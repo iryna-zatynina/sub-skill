@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, BrowserModule, AppRoutingModule, FooterComponent, SubscribeFormComponent, SocialButtonComponent],
+  imports: [CommonModule, BrowserModule, AppRoutingModule, FooterComponent, SubscribeFormComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

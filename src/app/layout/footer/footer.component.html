@@ -58,7 +58,9 @@
 
     <nav class="social">
       <ul>
-        <social-button [icon]="icon" *ngFor="let icon of icons"></social-button>
+        <li *ngFor="let icon of icons | keyvalue">
+          <social-button [icon]="icon.value"></social-button>
+        </li>
 
         <li class="telegram">
           <a href="">
