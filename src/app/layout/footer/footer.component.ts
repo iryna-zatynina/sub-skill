@@ -4,6 +4,8 @@ import { SocialButtonComponent } from './social-button/social-button.component';
 import { CommonModule } from '@angular/common';
 import { Icons } from 'src/app/core/interfaces/icon';
 
+const socialIconPath = 'assets/icons/social/';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -12,30 +14,31 @@ import { Icons } from 'src/app/core/interfaces/icon';
   imports: [CommonModule,
     SubscribeFormComponent, SocialButtonComponent],
 })
+
 export class FooterComponent {
   public icons: Icons = {
     instagram: {
-      img: 'assets/icons/instagram.svg',
+      img: socialIconPath + 'instagram.svg',
       color: '#F56040',
       title: 'Instagram',
     },
     telegram: {
-      img: 'assets/icons/telegram.svg',
+      img: socialIconPath + 'telegram.svg',
       color: '#0088CC',
       title: 'Telegram',
     },
     youtube: {
-      img: 'assets/icons/youtube.svg',
+      img: socialIconPath + 'youtube.svg',
       color: '#FF0000',
       title: 'YouTube',
     },
     facebook: {
-      img: 'assets/icons/facebook.svg',
+      img: socialIconPath + 'facebook.svg',
       color: '#3B5998',
       title: 'Facebook',
     },
     tiktok: {
-      img: 'assets/icons/tiktok.svg',
+      img: socialIconPath + 'tiktok.svg',
       color: '#000000',
       title: 'TikTok',
     },
