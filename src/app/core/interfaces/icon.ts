@@ -1,9 +1,9 @@
 export interface Icon {
-    img: string;
-    color?: string;
-    title?: string;
+  img: string;
+  color?: string;
+  title?: string;
 }
 
 export interface Icons {
-    [key: string]: Icon;
+  [key: string]: Icon;
 }
