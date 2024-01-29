@@ -58,6 +58,26 @@ form {
       &::before {
         content: url("/assets/icons/shopping-cart-alt.svg");
       }
+
+      &:hover {
+        background-color: $small_text_color;
+        color: $hover_green_button;
+      }
+
+      &:focus {
+        background-color: $small_text_color;
+        color: $hover_green_button;
+      }
+
+      &:active {
+        background-color: $common_text_color;
+        color: $click_green_button;
+      }
+
+      &:disabled {
+        background-color: $blocked_gray_button;
+        color: $blocked_light_text;
+      }
     }
   }
 }
