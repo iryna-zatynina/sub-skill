@@ -33,7 +33,6 @@ export class CategoriesSideBarComponent {
   }
 
   public categorySelected = (category: string):object => {
-    console.log(this.categories[category])
     if(this.categories[category]) {
       return {
         backgroundColor: 'rgba(83, 230, 62, 0.10)',
