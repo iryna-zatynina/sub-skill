@@ -15,13 +15,25 @@
   <div class="languages" (click)="languageButton()">
     <div class="flex-column" [@fadeOpenCloseMain]="openCloseLanguage">
         <div class="flex-row">
-            <span  class="main-language">English</span>
-            <div class="arrow"></div>
+            <span  class="main-language">{{ languageEnglish ? 'English' : 'Not English' }}</span>
+            <div class="arrow" 
+            [ngStyle]="{
+              'mask': arrows[openCloseLanguage]
+            }"
+            ></div>
         </div>
         
-        <ul *ngIf="languageButtonValue" [@fadeInOut]="languageButton">
-            <li>English</li>
-            <li>Not English</li>
+        <ul [@fadeInOut]="openCloseLanguage">
+            <li (click)="setLanguage(true)" 
+            [ngStyle]="{
+              'color': languageEnglish?'':'#A9A9A9'
+            }"
+            >English</li>
+            <li (click)="setLanguage(false)"
+            [ngStyle]="{
+              'color': languageEnglish?'#A9A9A9':''
+            }"
+            >Not English</li>
         </ul>
     </div>
   </div>

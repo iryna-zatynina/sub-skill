@@ -15,17 +15,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [CommonModule, IconSideBarComponent, CategoriesSideBarComponent, BrowserAnimationsModule],
   animations: [
     trigger('fadeInOut', [
-      state('close', style({ 
-        opcity: '1',
-        transform: 'translateY(0)'
+      state('closed', style({ 
+        opacity: '0',
+        visibility: 'hidden',
+        transform: 'translateY(100%)'
       })),
       state('open', style({ 
-        opcity: '0',
-        transform: 'translateY(+100%)'
+        opacity: '1',
+        visibility: 'visible',
+        transform: 'translateY(0)'
       })),
-      transition('open <=> close', [       
+      transition('closed => open', [       
         animate('500ms ease-in-out')
-      ])
+      ]),
     ]),
     trigger('fadeOpenCloseMain', [
       state('open', style({ 
@@ -60,15 +62,26 @@ export class SideBarComponent {
       title: 'My Skills'
     }
   }
+
+  public arrows:{[key:string]: string} = {
+    'closed': 'url(../../../assets/icons/angle-down.svg)',
+    'open': 'url(../../../assets/icons/angle-up.svg)'
+  };
+
   public iconOrder: string[] = ['estate', 'profile', 'bookmarks', 'mySkills'];
 
   public languageButtonValue: boolean = false;
   public openCloseLanguage: string = 'closed';
+  public languageEnglish: boolean = true;
 
-  public languageButton = (): void => {
+  public setLanguage(languageEnglishBoolean: boolean): void {
+    this.languageEnglish = languageEnglishBoolean
+    console.log(this.languageEnglish)
+  }
+
+  public languageButton():void {
     this.languageButtonValue = !this.languageButtonValue;
     this.openCloseLanguage = this.languageButtonValue ? 'open' : 'closed';
-    console.log(this.openCloseLanguage)
   }
 
 
