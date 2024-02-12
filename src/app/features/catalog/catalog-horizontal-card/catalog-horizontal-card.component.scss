@@ -1,0 +1,64 @@
+@import '../../../shared/style/colors';
+@import '../../../shared/style/fonts';
+
+.horizontal-card {
+  border-radius: 20px;
+  display: flex;
+  width: 848px;
+  height: 258px;
+  background-color: #FFF;
+  font-family: $primary_font_family;
+  overflow: hidden;
+
+  &__img {
+    width: 306px;
+    flex-shrink: 0;
+    height: 100%;
+    background: url("../../../../assets/images/test-card-img.jpeg") center/cover no-repeat;
+  }
+
+  &__details {
+    flex-grow: 1;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 542px;
+  }
+
+  &__text-content {
+    width: 100%;
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__description {
+    height: 48px;
+    margin: 8px 0;
+  }
+
+  &__info-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__level {
+    display: flex;
+    gap: 8px;
+
+    &::before {
+      content: "·";
+    }
+
+    &::after {
+      content: "·";
+    }
+  }
+}
