@@ -1,0 +1,13 @@
+@import "src/app/shared/style/_colors.scss";
+
+.cart{
+    display: flex;
+justify-content: center;
+align-items: center;
+background-color: $background_search;
+height: 40px;
+border: none;
+border-radius: 8px;
+padding: 16px;
+gap: 16px;
+}
