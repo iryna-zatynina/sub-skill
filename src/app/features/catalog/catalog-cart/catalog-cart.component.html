@@ -1,16 +1,23 @@
 <div class="cart">
-    <img src="" alt="">
-    <div class="detail_info">
-        <div class="rating">
-            <star-rating [rating]="cart.rating"></star-rating>
+    <div class="cart__img"></div>
+    <div class="cart__detailed-info">
+        <div class="cart__detailed-info__rating">
+            <star-rating class="cart__detailed-info__rating__star-rating" [rating]="cart.rating"></star-rating>
+            <a class="cart__detailed-info__rating__reviews"> All Reviews</a>
         </div>
-        <div class="title-description">
-            <div class="title"></div>
-            <div class="description"></div>
+        <div class="cart__detailed-info__title-description">
+            <div class="cart__detailed-info__title-description__title">{{ cart.name }}</div>
+            <div class="cart__detailed-info__title-description__description" [truncate]="70">{{ cart.description }}
+            </div>
         </div>
-        <div class="buy">
-            <div class="time"></div>
-            <button></button>
+        <div class="cart__detailed-info__buy">
+            <div class="cart__detailed-info__buy__time">
+                <i class="uil uil-clock-three"></i>
+                <div class="cart__detailed-info__buy__time__value">{{ cart.learningTime }}</div>
+            </div>
+            <div class="cart__detailed-info__buy__icon">
+                <i class="uil uil-bookmark"></i>
+            </div>
         </div>
     </div>
 </div>

@@ -16,7 +16,6 @@ export class TruncateDirective implements AfterViewInit {
 
   private truncateText() {
     const text = this.el.nativeElement.innerText;
-    console.log(this.maxLength, text.length);
     if (text.length > this.maxLength) {
       const truncatedText = text.substring(0, this.maxLength) + '...';
       this.renderer.setProperty(this.el.nativeElement, 'innerText', truncatedText);

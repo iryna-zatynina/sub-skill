@@ -5,10 +5,7 @@
 }
 .star-rating {
     @extend %flex-display;
-    align-items: center;
     font-size: 16px;
-    justify-content: center;
-    
 }
 .back-stars {
     @extend %flex-display; 
