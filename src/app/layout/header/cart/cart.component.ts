@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -10,5 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class CartComponent {
   counter: number = 0;
-
+  constructor(
+    private router: Router
+  ) {
+  }
+  toCartPage(){
+    this.router.navigate(['cart']);
+  }
 }
