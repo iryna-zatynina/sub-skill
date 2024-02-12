@@ -8,10 +8,12 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SubscribeFormComponent } from './layout/footer/subscribe-form/subscribe-form.component';
 import { SocialButtonComponent } from './layout/footer/social-button/social-button.component';
 import { CommonModule } from '@angular/common';
+import { CatalogComponent } from './features/catalog/catalog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, BrowserModule, AppRoutingModule, SideBarComponent, FooterComponent, SubscribeFormComponent],
+  imports: [CommonModule, BrowserModule, AppRoutingModule, SideBarComponent, FooterComponent, SubscribeFormComponent, CatalogComponent, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,1 +1,8 @@
-<p>catalog works!</p>
+<div class="catalog">
+    <ng-container *ngIf="catalogCarts$ | async as carts">
+        <catalog-cart *ngFor="let cart of carts" [cart]="cart"></catalog-cart>
+    </ng-container>
+</div>
+
+
+

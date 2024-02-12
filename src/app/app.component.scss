@@ -1,8 +1,11 @@
 @import './shared/style/_colors.scss';
 
 .main {
-    height: 100%;
     background-color: $background_color;
+}
+
+.main-content {
+    padding-left: 280px;
 }
 
 app-footer {
