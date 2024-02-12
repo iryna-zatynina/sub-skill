@@ -1,4 +1,4 @@
-export interface CatalogCart {
+export interface CatalogCard {
     id: number,
     name: string,
     photo: string,
@@ -12,8 +12,8 @@ export interface CatalogCart {
     reviews: []
 }
 
-export interface CatalogCarts {
-    content: [ CatalogCart ],
+export interface CatalogCards {
+    content: [ CatalogCard ],
     pageable: {
         pageNumber: number,
         pageSize: number,
