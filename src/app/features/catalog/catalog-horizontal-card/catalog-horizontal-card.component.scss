@@ -1,12 +1,12 @@
-@import '../../../shared/style/colors';
-@import '../../../shared/style/fonts';
+@import "../../../shared/style/colors";
+@import "../../../shared/style/fonts";
 
 .horizontal-card {
   border-radius: 20px;
   display: flex;
   width: 848px;
   height: 258px;
-  background-color: #FFF;
+  background-color: #fff;
   font-family: $primary_font_family;
   overflow: hidden;
 
@@ -26,6 +26,33 @@
     flex-wrap: wrap;
     gap: 8px;
     width: 542px;
+    color: $gray_text;
+  }
+
+  &__rating-block {
+    display: flex;
+  }
+
+  &__rating {
+    margin: 0 4px 0 8px;
+    font-weight: 500;
+  }
+
+  &__bookmark {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 44px;
+    aspect-ratio: 1/1;
+    background-color: $hover_small_green_button;
+
+    i {
+      font-size: 20px;
+      color: $normal_green_button;
+    }
   }
 
   &__text-content {
@@ -37,16 +64,39 @@
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
+    color: $common_text_color;
   }
 
   &__description {
     height: 48px;
     margin: 8px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
   }
 
   &__info-row {
     display: flex;
+    align-items: center;
     gap: 8px;
+    color: $common_text_color;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+
+    .uil-clock-three {
+      display: inline-block;
+      font-size: 16px;
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 16px;
   }
 
   &__level {
@@ -60,5 +110,21 @@
     &::after {
       content: "·";
     }
+  }
+
+  &__price {
+    color: $normal_green_button;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__buy {
+    padding: 12px 24px;
+    background-color: $common_text_color;
+    color: $focus_green_button;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
   }
 }
