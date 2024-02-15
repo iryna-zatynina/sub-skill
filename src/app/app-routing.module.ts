@@ -6,7 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: CatalogComponent
-  }
+  },
+  {
+    path: 'cart',
+    loadComponent: () =>
+      import('./features/catalog/catalog.component').then(// тут буде щлях до компоненту корзини
+        (m) => m.CatalogComponent// тут буде компонент корзини
+      ),
+  },
 ];
 
 @NgModule({
