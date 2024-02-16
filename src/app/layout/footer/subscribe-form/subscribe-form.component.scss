@@ -54,9 +54,10 @@ form {
       justify-content: center;
       align-items: center;
       border: none;
+      cursor: pointer;
 
       &::before {
-        content: url("/assets/icons/shopping-cart-alt.svg");
+        // content: url("/assets/icons/shopping-cart-alt.svg");
       }
 
       &:hover {
