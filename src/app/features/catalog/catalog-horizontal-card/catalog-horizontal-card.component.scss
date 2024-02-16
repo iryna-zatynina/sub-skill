@@ -102,6 +102,7 @@
   &__level {
     display: flex;
     gap: 8px;
+    text-transform: capitalize;
 
     &::before {
       content: "·";
@@ -126,5 +127,26 @@
     font-size: 16px;
     font-weight: 700;
     border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $small_text_color;
+      color: $hover_green_button;
+    }
+
+    &:focus {
+      background-color: $small_text_color;
+      color: $hover_green_button;
+    }
+
+    &:active {
+      background-color: $common_text_color;
+      color: $click_green_button;
+    }
+
+    &:disabled {
+      background-color: $blocked_gray_button;
+      color: $blocked_light_text;
+    }
   }
 }
