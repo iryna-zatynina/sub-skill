@@ -10,10 +10,11 @@ import { SocialButtonComponent } from './layout/footer/social-button/social-butt
 import { CommonModule } from '@angular/common';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, BrowserModule, AppRoutingModule, SideBarComponent, FooterComponent, SubscribeFormComponent, CatalogComponent, HttpClientModule],
+  imports: [CommonModule, BrowserModule, AppRoutingModule, SideBarComponent, FooterComponent, SubscribeFormComponent, CatalogComponent, HttpClientModule, HeaderComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
