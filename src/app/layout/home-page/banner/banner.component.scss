@@ -2,8 +2,8 @@
 @import '../../../shared/style/fonts';
 
 .carousel {
-  max-width: 1201px;
-  min-width: 1200px;
+  max-width: 1232px;
+  min-width: 1231px;
   width: auto;
 }
 
@@ -26,13 +26,18 @@
     justify-content: center;
     align-items: flex-start;
     font-family: $primary_font_family;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-    background: url('../../../../assets/images/test-card-img.jpeg') center/cover
-      no-repeat;
+    // background: url('../../../../assets/images/test-card-img.jpeg') center/cover
+    // no-repeat;
 
     padding: 40px 16px 40px 32px;
     gap: 16px;
-
+    &:hover {
+      cursor: pointer;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -54,6 +59,18 @@
     &__rating-block {
       position: relative;
       z-index: 2;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 30px;
+      z-index: 0;
     }
     &__title {
       text-overflow: ellipsis;

@@ -7,8 +7,11 @@
       [wrap]="true">
       <ng-template ngbSlide *ngFor="let card of cards">
         <div class="carousel-wrapper">
-          <div class="carousel-block">
-            <!-- <img src="../../../../../assets/images/test-card-img.jpeg" alt="image"> -->
+          <div class="carousel-block" [routerLink]="['/page-path', card.id]">
+            <img
+              [src]="getSafeImageUrl(card.photo)"
+              alt="Card Image"
+              class="carousel-block__image" />
             <div class="carousel-block__rating-block">
               <star-rating
                 class="carousel-block__rating-stars"
