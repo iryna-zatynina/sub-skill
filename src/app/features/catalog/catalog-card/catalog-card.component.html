@@ -6,8 +6,8 @@
             <a class="card__detailed-info__rating__reviews"> All Reviews</a>
         </div>
         <div class="cart__detailed-info__title-description">
-            <div class="cart__detailed-info__title-description__title">{{ cart.name }}</div>
-            <div class="cart__detailed-info__title-description__description">{{ cart.description }}
+            <div class="cart__detailed-info__title-description__title">{{ card.name }}</div>
+            <div class="cart__detailed-info__title-description__description" [truncate]="50">{{ card.description }}
             </div>
         </div>
         <div class="card__detailed-info__buy">

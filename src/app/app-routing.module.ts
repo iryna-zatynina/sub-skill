@@ -5,7 +5,10 @@ import { CatalogComponent } from './features/catalog/catalog.component';
 const routes: Routes = [
   {
     path: '',
-    component: CatalogComponent
+    loadComponent: () =>
+      import('./layout/home-page/home-page.component').then(
+        (m) => m.HomePageComponent
+      ),
   },
   {
     path: 'cart',

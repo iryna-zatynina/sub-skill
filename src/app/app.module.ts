@@ -11,10 +11,11 @@ import { CommonModule } from '@angular/common';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './layout/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, BrowserModule, AppRoutingModule, SideBarComponent, FooterComponent, SubscribeFormComponent, CatalogComponent, HttpClientModule, HeaderComponent],
+  imports: [CommonModule, BrowserModule, AppRoutingModule, SideBarComponent, FooterComponent, SubscribeFormComponent, CatalogComponent, HttpClientModule, HeaderComponent, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })
