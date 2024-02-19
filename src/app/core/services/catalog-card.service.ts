@@ -7,14 +7,14 @@ import { CatalogCard, CatalogCards } from '../interfaces/catalog';
 @Injectable({
   providedIn: 'root'
 })
-export class CatalogCardService {
+export class CatalogCartService {
 
   constructor(private _httpClient: HttpClient) { }
 
-  public getCatalogCards(): Observable<[CatalogCard]> {
+  public getCatalogCarts(): Observable<[CatalogCard]> {
     return this._httpClient.get<CatalogCards>(`${base_url}microskill/all`)
     .pipe(
-      map(cards => cards.content)
+      map(carts => carts.content)
     );
   }
 
