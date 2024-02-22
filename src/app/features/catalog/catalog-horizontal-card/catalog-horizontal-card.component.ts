@@ -5,13 +5,12 @@ import { CatalogCard } from 'src/app/core/interfaces/catalog';
 import { TruncateDirective } from 'src/app/shared/directives/truncate.directive';
 
 @Component({
-  selector: 'catalog-card',
+  selector: 'catalog-horizontal-card',
   standalone: true,
   imports: [CommonModule, StarRatingComponent, TruncateDirective],
-  templateUrl: './catalog-card.component.html',
-  styleUrls: ['./catalog-card.component.scss']
+  templateUrl: './catalog-horizontal-card.component.html',
+  styleUrls: ['./catalog-horizontal-card.component.scss']
 })
-export class CatalogCardComponent {
+export class CatalogHorizontalCardComponent {
   @Input() public card!: CatalogCard;
-  
 }
